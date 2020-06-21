@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule
+} from '@angular/core';
+import SymplrWebcomponents from 'fluent-webcomponent-exporter';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  bootstrap: [AppComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule
   ],
+  entryComponents: [SymplrWebcomponents],
   providers: [],
-  bootstrap: [AppComponent]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
